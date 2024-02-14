@@ -1,0 +1,208 @@
+$shadow: 0px 3px 5px rgba(0, 0, 0, 0.442);
+
+.navarea {
+    width: 100%;
+    height: 6.5rem;
+    background-color: rgba(240, 248, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .nav {
+        width: 60%;
+        height: 4rem;
+        background-color: var(--blue01);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        box-shadow: $shadow;
+        padding-left: 10px;
+        padding-right: 10px;
+        animation: navanim 0.5s;
+
+        @keyframes navanim {
+            0% {
+                width: 10%;
+            }
+
+            100% {
+
+                width: 60%;
+            }
+        }
+
+        .nev1 {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .neologo {
+                width: 3rem;
+                height: 3rem;
+            }
+
+        }
+
+        .nev2 {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .userI {
+                cursor: pointer;
+                width: 2.5rem;
+                height: 2.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                margin-right: 3px;
+                margin-left: 15px;
+                background-color: var(--iconblue02);
+            }
+
+            .usr {
+                color: var(--blue02);
+                transition: 0.2s;
+
+                &:hover {
+                    color: var(--blue03);
+                }
+            }
+
+        }
+
+        .nev1sp {
+            width: 60%;
+            height: 100%;
+            background-color: rgba(244, 143, 10, 0);
+        }
+
+    }
+
+
+}
+
+
+.usrSett {
+    position: absolute;
+    top: 5.5rem;
+    margin-right: -8.7rem;
+    width: 20rem;
+    height: 25rem;
+    animation: userAnim 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .choch {
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid var(--blue01);
+    }
+
+    .Aslibox {
+        background-color: var(--blue01);
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: $shadow;
+        padding: 10px;
+        text-align: center;
+        color: var(--blue03);
+        font-size: 0.9rem;
+
+        .profile {
+            width: 100%;
+            height: 50%;
+            background-color: rgba(240, 248, 255, 0);
+
+            .bxs {
+                width: 100%;
+                height: 50%;
+                background-color: rgba(0, 0, 0, 0.164);
+                text-align: center;
+                color: var(--blue03);
+                padding-top: 10px;
+
+                .gool {
+                    border: 5px solid rgba(0, 0, 0, 0.506);
+                    position: absolute;
+                    width: 7rem;
+                    height: 7rem;
+                    padding: 0px;
+                    border-radius: 50%;
+                    background-color: var(--iconblue02);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 1rem;
+                    margin-left: 6.3rem;
+
+                    #usr {
+                        height: 5.5rem;
+                        width: 5.5rem;
+                        color: var(--blue02);
+                    }
+                }
+            }
+        }
+
+        .sttng {
+
+            width: 100%;
+            height: 46%;
+            padding-top: 30px;
+
+            .stt {
+                cursor: pointer;
+                width: 100%;
+                height: 4.5rem;
+                background-color: rgba(240, 248, 255, 0.052);
+                margin-bottom: 10px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: rgba(240, 248, 255, 0.167);
+                }
+
+                b {
+                    width: 25%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    // background-color: red;
+                }
+            }
+        }
+    }
+
+    @keyframes userAnim {
+        0% {
+            opacity: 0;
+            top: 0rem;
+            height: 0rem;
+        }
+
+        100% {
+            opacity: 1;
+            height: 25rem;
+            top: 5.5rem;
+
+        }
+    }
+
+}

@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+
+
+}
+
+#root {
+    background: url("../assets/svgs/neuton-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lighttheme {
+    --blue01:#27005D;
+    --blue02:#9400FF;
+    --blue03:#AED2FF;
+    --blue04:#E4F1FF;
+    --fontblue01: #7700cc;
+    --iconblue01: #6400ac;
+    --iconblue02: #6400ac95;
+    --shadow:0px 3px 5px rgba(0, 0, 0, 0.442);
+
+}
+
+
+@media screen and (max-width: 600px) {
+    * {
+        display: none;
+    }
+}
