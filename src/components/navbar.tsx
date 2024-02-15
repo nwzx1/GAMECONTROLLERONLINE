@@ -12,7 +12,7 @@ import { useDispatch } from 'react-redux'
 import { ToastContainer, toast } from 'react-toastify'
 import { useRouter } from 'next/router'
 
-export default function Navbar() {
+export default function Navbar({ Gclick, GCclick }: { Gclick: () => void, GCclick: () => void }) {
 
     const [userClick, setUserClick] = useState<boolean>(false)
 
@@ -41,7 +41,28 @@ export default function Navbar() {
                     </h3>
                 </div>
                 <div className={styes.nev1sp}>
+                    <div
+                        className={styes.userI}
+                        onClick={(e) => Gclick()}
+                    >
+                        <Icon
+                            className={styes.usr}
+                            icon={"icon-park-solid:game"}
+                            width={27}
+                        />
+                        Games
+                    </div>
 
+                    <div
+                        className={styes.userI}
+                        onClick={(e) => GCclick()}>
+                        <Icon
+                            className={styes.usr}
+                            icon={"basil:gamepad-solid"}
+                            width={30}
+                        />
+                        Controller
+                    </div>
                 </div>
                 <div className={styes.nev2}>
                     <UserSettings
@@ -54,22 +75,21 @@ export default function Navbar() {
                             className={styes.usr}
                             icon={"basil:settings-solid"}
                             width={30}
-                        // onClick={(e) => {
-                        //     e.preventDefault();
-                        //     setUserClick(!userClick)
-                        // }}
+                        
                         />
                     </div>
 
-                    <div className={styes.userI}>
+                    <div
+                        className={styes.userI}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setUserClick(!userClick)
+                        }}
+                    >
                         <Icon
                             className={styes.usr}
                             icon={"basil:user-solid"}
                             width={30}
-                            onClick={(e) => {
-                                e.preventDefault();
-                                setUserClick(!userClick)
-                            }}
                         />
                     </div>
 
@@ -102,7 +122,9 @@ function UserSettings({ click, userdata }: { click: boolean, userdata: DataFatch
             }}>
             <ToastContainer
                 style={{
-                    position: 'fixed'
+                    position: 'fixed',
+                    right:0,
+                    top:0,
                 }}
             />
             <ConditionPopup
@@ -151,6 +173,8 @@ function UserSettings({ click, userdata }: { click: boolean, userdata: DataFatch
                 </div>
                 Hii! {userdata?.userDetails?.Uname}
                 <div className={styes.sttng}>
+
+
                     <div
                         className={styes.stt}
                         onClick={() => { route.push("/auth/login") }}

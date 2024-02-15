@@ -17,6 +17,7 @@ import Link from 'next/link'
 
 
 
+
 export default function Login(user: any) {
 
   const [load, setload] = useState<boolean>(true);
@@ -26,6 +27,7 @@ export default function Login(user: any) {
 
   const [Uvl,setUvl] = useState<objmsg>();
   const [Pvl,setPvl] = useState<objmsg>();
+
 
   const route = useRouter()
   const dispatch = useDispatch()
@@ -79,7 +81,7 @@ export default function Login(user: any) {
               className={nxt ? styles.logo1 : styles.logo2}
               alt=''
               property=''
-            />Neutron login
+            />Neotron login
           </div>
           
           <div className={styles.mid2}>

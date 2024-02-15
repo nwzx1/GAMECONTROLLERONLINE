@@ -1,11 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Register from "./auth/register";
-import {userStoreType} from "@/backend/backend"
+import React, {useState } from "react";
 import Home from "../components/page/Home";
-import { useRouter } from "next/router";
-import { useDispatch } from "react-redux";
-import { Structs } from "@/Redux_config/Authentication/UserAuth";
-import Datafatch from "@/components/datafatch";
 import Progress from "@/components/progress";
 
 export default function main(user:any): JSX.Element {

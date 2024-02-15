@@ -1,4 +1,16 @@
 .mainBg {
+    margin-top: 10rem;
     width: 100vw;
-    height: 100vh;
+    // height: 100rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .midboxs {
+        width: 60%;
+        height: 45rem;
+        background-color: rgba(37, 37, 37, 0);
+        display: flex;
+        flex-direction: row;
+    }
 }

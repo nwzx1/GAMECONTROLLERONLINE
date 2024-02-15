@@ -2,14 +2,18 @@
     padding: 0;
     margin: 0;
 
-
 }
 
 #root {
     background: url("../assets/svgs/neuton-bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
+
 
 .lighttheme {
     --blue01:#27005D;
@@ -19,6 +23,9 @@
     --fontblue01: #7700cc;
     --iconblue01: #6400ac;
     --iconblue02: #6400ac95;
+    --blueblur01: #ffffff25;
+    --blueblur02: #ffffff41;
+    --blur01:blur(10px);
     --shadow:0px 3px 5px rgba(0, 0, 0, 0.442);
 
 }

@@ -2,31 +2,42 @@ import React, { useEffect, useState } from 'react'
 import styles from '@/styles/home.module.scss'
 import { userStoreType } from '@/backend/backend'
 import { useRouter } from 'next/router'
-import {Datafatch} from '@/components/datafatch'
+import { Datafatch } from '@/components/datafatch'
 import Navbar from '../navbar'
+import Games from './games'
+import Gcontroller from './Gcontroller'
 
-export default function Home({user}:{user:any}) {
+export default function Home({ user }: { user: any }) {
 
   const route = useRouter()
-  const [userin,setUserin] = useState<userStoreType>(user)
+  const [userin, setUserin] = useState<userStoreType>(user)
+  const [scrool, setScrool] = useState<boolean>(true)
 
-  useEffect(()=> {
+  useEffect(() => {
 
-  },[user])
+  }, [user])
 
 
   return (
     <>
-    <Datafatch 
-        user={user} 
+      <Datafatch
+        user={user}
         getUser={(data) => {
 
         }}
-    />
-    <div className={styles.mainBg}>
-      <Navbar/>
-    </div>
+      />
+      <div className={styles.mainBg}>
+        <Navbar
+          Gclick={() => setScrool(true)}
+          GCclick={() => setScrool(false)}
+        />
+        <div className={styles.midboxs}>
+          {scrool ? 
+          <Games />
+          :<Gcontroller />}
+        </div>
+      </div>
     </>
-    
+
   )
 }
