@@ -5,7 +5,10 @@ export default function Gcontroller() {
   return (
     <div className={style.controllerPage}>
         <div className={style.topbar}>
-            CONTROLLER
+            <div>CONTROLLER</div>
+        </div>
+        <div className={style.mid}>
+
         </div>
     </div>
   )
